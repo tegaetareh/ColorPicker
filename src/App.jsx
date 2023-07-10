@@ -3,9 +3,14 @@ import { useState } from 'react'
 
 // Write your Color component here
 const Color = ({color, setSelectedColor, selectedColor}) => {
-let classNameString = color;
-// console.log("Selected color: "+ selectedColor)
-if(selectedColor === color){classNameString= color+ " selected"}
+
+//using if else statement
+//==================================================================
+// let classNameString = color;
+// if(selectedColor === color){classNameString= color+ " selected"}
+//using tenary operator
+//=================================================================
+const classNameString = (selectedColor === color)? color+ " selected" : color;
 
 
   return (
